@@ -1,0 +1,10 @@
+# font
+font-size = 16
+font-feature = -calt, -liga, -dlig
+
+# fullscreen
+fullscreen = true
+macos-non-native-fullscreen = visible-menu
+
+# theme
+theme = TokyoNight Moon
