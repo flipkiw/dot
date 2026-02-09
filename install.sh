@@ -7,7 +7,7 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 # homebrew packages
 brew update
 brew install git tmux fnm wget jq ripgrep fd fzf mariadb
-brew install --verbose --HEAD neovim
+brew install --HEAD neovim
 brew install --cask firefox keepassxc ghostty
 brew services start mariadb
 
