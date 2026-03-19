@@ -34,5 +34,6 @@ git config --global user.email "257479979+flipkiw@users.noreply.github.com"
 ssh-keygen -t ed25519 -C "257479979+flipkiw@users.noreply.github.com" -f ~/.ssh/id_ed25519
 
 # libera
-read -sp "libera password?" libera
+echo "libera password?"
+read -s libera
 echo "export libera_password='$libera'" >> ~/.zshenv
