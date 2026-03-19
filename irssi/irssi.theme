@@ -9,7 +9,7 @@ abstracts = {
 
 formats = {
   "fe-common/core" = {
-    join = "{channick_hilight $0} %_%G>>";
+    join = "{channick $0} %_%G>>";
     part = "{channick $0} %_%R<<";
     quit = "{channick $0} %_%R<<< %_%K{reason $2}";
     quit_once = "{channick $0} %_%R<<< %_%K{reason $2}";
