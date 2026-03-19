@@ -21,5 +21,5 @@ setopt HIST_IGNORE_SPACE
 
 # irssi with password injection
 irssi() {
-    caffeinate -i irssi --config=<(sed "s|PASSWORD|$libera_password|g" ~/.irssi/config) "$@"
+    command irssi --config=<(sed "s|PASSWORD|$libera_password|g" ~/.irssi/config) "$@"
 }
