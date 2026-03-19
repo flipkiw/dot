@@ -12,10 +12,11 @@ brew install --cask firefox keepassxc ghostty
 brew services start mariadb
 
 # link configs
-mkdir -p ~/.config/nvim && ln -sf ~/dot/init.lua ~/.config/nvim/init.lua
-mkdir -p ~/.config/tmux && ln -sf ~/dot/tmux.conf ~/.config/tmux/tmux.conf
-mkdir -p ~/.config/ghostty && ln -sf ~/dot/config ~/.config/ghostty/config
-ln -sf ~/dot/.zshrc ~/.zshrc
+mkdir -p ~/.config/nvim && ln -sf ~/dot/nvim/init.lua ~/.config/nvim
+mkdir -p ~/.config/tmux && ln -sf ~/dot/tmux/tmux.conf ~/.config/tmux
+mkdir -p ~/.config/ghostty && ln -sf ~/dot/ghostty/config ~/.config/ghostty
+mkdir -p ~/.irssi && ln -sf ~/dot/irssi/{config,irssi.theme} ~/.irssi
+ln -sf ~/dot/zsh/.zshrc ~/
 
 # setup fnm & nodejs
 eval "$(fnm env --use-on-cd --shell zsh)"
