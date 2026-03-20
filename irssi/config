@@ -27,5 +27,5 @@ channels = (
 
 settings = {
   core = { real_name = "pof"; user_name = "pof"; nick = "pof"; };
-  "fe-common/core" = { theme = "irssi.theme"; };
+  "fe-common/core" = { theme = "irssi.theme"; autolog = "yes"; };
 };

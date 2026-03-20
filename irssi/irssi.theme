@@ -13,5 +13,5 @@ formats = {
     part = "{channick $0} %_%R<<";
     quit = "{channick $0} %_%R<<< %_%K{reason $2}";
     quit_once = "{channick $0} %_%R<<< %_%K{reason $2}";
-  }
-}
+  };
+};
