@@ -7,14 +7,10 @@ vim.pack.add({
 	-- colorscheme
 	{ src = "https://github.com/folke/tokyonight.nvim" },
 
-	-- fzf & oil
-	{ src = "https://github.com/ibhagwan/fzf-lua" },
-	{ src = "https://github.com/stevearc/oil.nvim" },
-
 	-- utils
+	{ src = "https://github.com/ibhagwan/fzf-lua" },
+	{ src = "https://github.com/stevearc/conform.nvim" },
 	{ src = "https://github.com/tpope/vim-sleuth" },
-	{ src = "https://github.com/sbdchd/neoformat" },
-	{ src = "https://github.com/windwp/nvim-autopairs" },
 
 	-- lsp, treesitter & blink.cmp
 	{ src = "https://github.com/neovim/nvim-lspconfig" },
@@ -36,13 +32,11 @@ require("fzf-lua").setup({
 	},
 })
 
--- oil
-require("oil").setup({
-	view_options = {
-		show_hidden = true,
-		is_always_hidden = function(name, bufnr)
-			return name == ".git" or name == "node_modules"
-		end,
+-- conform
+require("conform").setup({
+	formatters_by_ft = {
+		lua = { "stylua" },
+		javascript = { "prettierd", "prettier", top_after_first = true },
 	},
 })
 
@@ -54,9 +48,6 @@ vim.api.nvim_create_autocmd("FileType", {
 		vim.treesitter.start()
 	end,
 })
-
--- autopairs
-require("nvim-autopairs").setup({})
 
 -- blink.cmp
 require("blink.cmp").setup({
@@ -87,8 +78,8 @@ vim.keymap.set("n", "<leader>f", ":FzfLua live_grep<CR>", { silent = true })
 vim.keymap.set("n", "<leader>g", ":FzfLua git_status<CR>", { silent = true })
 vim.keymap.set("n", "<leader>h", ":FzfLua git_bcommits<CR>", { silent = true })
 
--- neoformat
-vim.keymap.set("n", "<leader>i", ":Neoformat<CR>", { silent = true })
+-- conform
+vim.keymap.set("n", "<leader>i", "<cmd>lua require('conform').format()<CR>", { silent = true })
 
 -- lsp
 vim.keymap.set("n", "gd", vim.lsp.buf.definition)
@@ -96,7 +87,7 @@ vim.keymap.set("n", "gi", vim.lsp.buf.implementation)
 vim.keymap.set("n", "K", vim.diagnostic.open_float)
 
 -- netrw
-vim.keymap.set("n", "-", ":Oil<CR>", { silent = true })
+vim.keymap.set("n", "-", ":Ex<CR>", { silent = true })
 
 --------------- SETS ---------------
 
@@ -114,3 +105,4 @@ vim.o.swapfile = false
 vim.o.termguicolors = true
 vim.o.updatetime = 50
 vim.o.wrap = false
+vim.g.netrw_banner = false
