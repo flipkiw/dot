@@ -57,10 +57,7 @@ require("blink.cmp").setup({
 		["<C-k>"] = { "select_prev", "fallback" },
 		["<C-j>"] = { "select_next", "fallback" },
 	},
-	completion = {
-		documentation = { auto_show = true },
-		menu = { draw = { columns = { { "label", "source_name", "kind", gap = 1 } } } },
-	},
+	completion = { documentation = { auto_show = true } },
 	fuzzy = { implementation = "prefer_rust_with_warning" },
 	cmdline = { completion = { menu = { auto_show = true } } },
 })
