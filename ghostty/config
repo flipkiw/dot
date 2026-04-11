@@ -1,0 +1,9 @@
+# font
+font-size = 16
+font-feature = -calt, -liga, -dlig
+
+# fullscreen
+fullscreen = non-native-visible-menu
+
+# theme
+theme = TokyoNight Moon
