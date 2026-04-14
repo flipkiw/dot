@@ -7,3 +7,6 @@ fullscreen = non-native-visible-menu
 
 # theme
 theme = TokyoNight Moon
+
+# misc
+macos-option-as-alt = true

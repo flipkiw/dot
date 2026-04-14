@@ -6,7 +6,7 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # homebrew packages
 brew update
-brew install git neovim tmux fnm wget jq ripgrep fd fzf mariadb
+brew install git neovim tmux irssi fnm wget jq ripgrep fd fzf mariadb
 brew install --cask firefox keepassxc ghostty
 brew services start mariadb
 
@@ -14,6 +14,7 @@ brew services start mariadb
 mkdir -p ~/.config/nvim && ln -sf ~/dot/nvim/init.lua ~/.config/nvim
 mkdir -p ~/.config/tmux && ln -sf ~/dot/tmux/tmux.conf ~/.config/tmux
 mkdir -p ~/.config/ghostty && ln -sf ~/dot/ghostty/config ~/.config/ghostty
+mkdir -p ~/.irssi && ln -sf ~/dot/irssi/{config,irssi.theme} ~/.irssi
 ln -sf ~/dot/zsh/.zshrc ~/
 
 # setup fnm & nodejs
