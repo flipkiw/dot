@@ -22,7 +22,7 @@ chatnets = {
 };
 
 channels = (
-  { name = "#linux"; chatnet = "liberachat"; autojoin = "No"; }
+  { name = "#linux"; chatnet = "liberachat"; autojoin = "Yes"; }
 );
 
 settings = {

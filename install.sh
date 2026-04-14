@@ -14,7 +14,6 @@ brew services start mariadb
 mkdir -p ~/.config/nvim && ln -sf ~/dot/nvim/init.lua ~/.config/nvim
 mkdir -p ~/.config/tmux && ln -sf ~/dot/tmux/tmux.conf ~/.config/tmux
 mkdir -p ~/.config/ghostty && ln -sf ~/dot/ghostty/config ~/.config/ghostty
-mkdir -p ~/.irssi && ln -sf ~/dot/irssi/{config,irssi.theme} ~/.irssi
 ln -sf ~/dot/zsh/.zshrc ~/
 
 # setup fnm & nodejs
@@ -31,3 +30,7 @@ npm i -g http-server prettier @johnnymorganz/stylua-bin tree-sitter-cli
 git config --global user.name "flipkiw"
 git config --global user.email "257479979+flipkiw@users.noreply.github.com"
 ssh-keygen -t ed25519 -C "257479979+flipkiw@users.noreply.github.com" -f ~/.ssh/id_ed25519
+
+# libera
+read -rs "libera_password?libera password: "
+echo "export libera_password='$libera_password'" >> ~/.zprofile

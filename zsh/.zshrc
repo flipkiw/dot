@@ -18,3 +18,8 @@ PROMPT='%F{magenta}%~%f %(?.%F{yellow}.%F{red})❯%f '
 # misc
 bindkey -e # force emacs mode
 setopt HIST_IGNORE_SPACE
+
+# irssi
+irssi() {
+    command irssi --home ~/dot/irssi --config <(sed "s/PASSWORD/$libera_password/g" ~/dot/irssi/config)
+}
